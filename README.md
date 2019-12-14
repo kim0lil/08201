@@ -4,4 +4,4 @@
 
 ## 스프링 코어
 
-[](./resources/SpringCore/README.md)
+[자세히](./resources/SpringCore/README.md)
