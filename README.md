@@ -5,3 +5,7 @@
 ## 스프링 코어
 
 [자세히](./resources/SpringCore/README.md)
+
+## 스프링 배치
+
+[자세히](./resources/SpringBatch/README.md)

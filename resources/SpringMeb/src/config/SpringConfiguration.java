@@ -5,7 +5,8 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @Import({
-	WebConfiguration.class
+	//WebConfiguration.class,
+	InterceptorConfiguration.class
 })
 public class SpringConfiguration {
 	

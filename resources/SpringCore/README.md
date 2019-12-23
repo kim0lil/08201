@@ -90,3 +90,110 @@
 ### value
 
 [설명](./src/annotations/value/package-info.java)
+
+## ApplicationContext
+
+ApplicationContext는 등록 된 빈(bean)을 관리 하는 역활을 하며 정교하게 AOP를 적용할 수 있도록 돕고 있습니다.
+
+|구현체|기본위치|타입|
+|:--|:--|:--|
+|ClassPathXmlApplicationContext|classpath|XML|
+|FileSystemXmlApplicationContext|file|XML|
+|AnnotationConfigApplicationContext|classpath|JAVA|
+|XmlWebApplicationContext|web application root path|XML|
+|AnnotationConfigWebApplicationContext|web application classpath|JAVA|
+
+## Enable Annotations
+
+스프링의 설정에서 사용 되는 활성화 기능에 관하여 하나씩 풀어 보도록 하겠습니다.
+
+좀더 자세한 기능을 각 기능에 관하여 다루어 볼 예정입니다.
+
+### EnableAspectJAutoProxy
+
+@Aspect을 처리 하는 기능을 활성화
+
+### EnableAsync
+
+@Asynchronous을 처리하는 기능을 활성화
+
+### EnableCaching
+
+@Cacheable을 처리하는 기능을 활성화
+
+### EnableLoadTimeWeaving
+
+로드타임 위빙 기능을 활성화
+
+### EnableScheduling
+
+@Scheduled을 처리하는 기능을 활성화
+
+### EnableSpringConfigured
+
+@Configurable을 처리하는 기능을 활성화
+
+### EnableTransactionManagement
+
+@Transact1onal이나 @TransactionAttribute을 처리하는 기능을 활성화
+
+### EnableWebMvc
+
+스프링 웹 MVC와 관련 된 기능을 활성화
+
+## DispatcherServlet이 사용하는 기본 컴포넌트
+
+### MultipartResolver
+
+멀티파트 파일 업로드를 관리 처리하는 컴포넌트
+
+(기본값은 존재 하지 않음)
+
+### LocaleResolver
+
+로케일을 결정하고 처리하는 컴포넌트
+
+(AcceptHeaderLocaleResolver)
+
+### ThemeResolver
+
+테마를 결정하고 변경하는 컴포넌트
+
+(FixedThemeResolver)
+
+### HandlerMapping
+
+사용자의 요청을 핸들러와 매핑하는 컴포넌트
+
+(BeanNameUrlHandlerMapping, RequestMappingHandlerMapping)
+
+### HandlerAdaptor
+
+핸들러 객체가 요청을 처리할수 있도록 돕는 컴포넌트
+
+(HttpRequestHandlerAdapter, SimpleControllerHandlerAdapter, AnnotationMethodHandlerAdapter)
+
+### HandlerExceptionResolver
+
+핸들러를 실행하는 동안 오류가 발생할 경우 처리하는 컴포넌트
+
+(AnnotationMethodHandlerExceptionResolver, ResponseStatusExceptionResolver , DefaultHandlerExceptionResolver)
+
+### RequestToViewNameTranslator
+
+핸들러가 아무것도 반환하지 않을 경우 뷰 이름을 결정하는 컴포넌트
+
+(DefaultRequestToViewNameTranslator)
+
+### ViewResolver
+
+뷰 명칭으로 뷰 구현체를 찾는 컴포넌트
+
+(lnternalResourceViewResolver)
+
+### FlashMapManager
+
+컴포넌트간에 공유를 위하여 세션단위로 저장소를 관리하는 컴포넌트
+
+(SessionFlashMapManager)
+
