@@ -75,7 +75,7 @@ Calculator -> Calculation <- HistoryCalculation
 
 - - -
 
-따라서 Calculator는 Calculation의 구현체와는 분리되어 개발할 수 있게 되었습니다.
+따라서 `Calculator`는 `Calculation`의 구현체와는 분리되어 개발할 수 있게 되었습니다.
 
 이번에는 객체간 의존성에 말해 보도록 하겠습니다.
 
@@ -226,7 +226,7 @@ Calculator가 SimpleCalculation 객체를 의존하지도 않습니다.
 |:--|:--:|:--|
 |@Autowired|type|타입에 기반으로 의존성을 등록 하며 두가지 이상의 타입이 있을 경우 @qualifier를 추가로 사용|
 |@Resource|name|빈 명칭 기반으로 의존성을 등록합니다.|
-|@Inject|@annotation|고유한 annotation을 기반으로 의존성을 등록합니다.|
+|@Inject|@annotation|고유한 annotation을 기반으로 의존성을 등록합니다.
 
 더 자세한 설명 및 예제는 `resources/SpringCore/src/annotations` 을 참조 하세요  
 (&issue Inject는 작성하지 않음)
@@ -234,6 +234,63 @@ Calculator가 SimpleCalculation 객체를 의존하지도 않습니다.
 [요약 : @Resource](./resources/SpringCore/src/annotations/resource/package-info.java)  
 [요약 : @Autowired](./resources/SpringCore/src/annotations/autowired/package-info.java)  
 [요약 : @Qualifier](./resources/SpringCore/src/annotations/qualifier/package-info.java)  
+[요약 : @Primary](./resources/SpringCore/src/annotations/primary/package-info.java)  
+
+- - -
+
+### 부가적인 에너테이션
+
+그 외의 부가 에너테이션은 설명과 함께 예제파일을 제공합니다.
+
+#### Import
+
+개발 도중에 운영시 또는 개발시와 같이 설정을 분리 하는 일은 흔합니다.
+
+스프링에서 설정을 분리 하는 일은 `@import` 에너테이션을 붙여 가능합니다.
+
+- - -
+
+더 자세한 설명 및 예제는 `resources/SpringCore/src/annotations/import` 을 참조 하세요
+
+[요약 : @Import](./resources/SpringCore/src/annotations/import/package-info.java)
+
+- - -
+
+#### Scope
+
+빈을 생성할 때에 해당 빈을 최초 한번 생성할지 아니면 매번 생성할지와 같이 빈의 생성 범위를 선택하여야 합니다.
+
+이러한 생성 범위를 스프링에서는 `@Scope`를 등록 함으로써 관리합니다.
+
+기본(default)는 `Singleton(단일)`입니다.
+
+- - -
+
+더 자세한 설명 및 예제는 `resources/SpringCore/src/annotations/scope` 을 참조 하세요
+
+[요약 : @Import](./resources/SpringCore/src/annotations/scope/package-info.java)
+
+- - -
+
+## 외부 리소스 사용하기
+
+이번에는 외부의 리소스를 불러오고 사용하는 방법에 관하여 다루어 보도록 하겠습니다.
+
+스프링에서는 Resource라는 단일 인터페이스를 제공함으로써 간략화된 리소스 인터페이스를 사용합니다.
+
+가령 설정값을 불러 오는 일부터 해보겠습니다.
+
+### 설정파일(.priperties) 불러오기
+
+스프링에서 설정파일을 불러 오는 일은 간단합니다.
+
+`@PropertySource` 에너테이션을 등록하여 간단히 설정값을 불러올 수 있습니다.
+
+- - -
+
+더 자세한 설명 및 예제는 `resources/SpringCore/src/annotations/propertySource` 을 참조 하세요
+
+[요약 : @Import](./resources/SpringCore/src/annotations/propertySource/package-info.java)
 
 - - -
 
