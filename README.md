@@ -294,3 +294,71 @@ Calculator가 SimpleCalculation 객체를 의존하지도 않습니다.
 
 - - -
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 스프링 소셜
+
+스프링 소셜은 소셜 네트워크의 인가 및 접속 흐름을 관리하는 커넥션 프레임워크(connection framework)와 서비스 공급자, 소비기(application), 사용자 간의 oAuth를 주고 받는 접속 관리(Connection Controller), 사용자가 자신의 소셜 네트워크 계정에 로그인할 수 있도록 스프링 소셜을 스프링 시큐리티와 연동하는 소셜 인증 필터(SocialAuthenticationFilter) 세부분으로 구분 됩니다.
+
+**스프링 소셜**
+1. Connection Framework
+2. Connection Controller
+3. SocialAuthenticationFielter
+
+
+
+
+
+
+## JMX Mbean
+
+스프링은 IoC 컨테이너의 모든 빈을 MBean으로 익스포트하는 식으로 JMX를 지원합니다.
+
+따라서 스프링에서는 MBeanExporter 인스턴스를 선언하기만 하면 됩니다.
+
